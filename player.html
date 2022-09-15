@@ -8,11 +8,16 @@
   <div id="player">
 </div>
 <script>
-    var src="https://myexample.com/test.php?id=xyz";
+      var url_string = location.href;
+var url = new URL(url_string);
+var src = url.searchParams.get("v");
     var player = new Clappr.Player({source: src, 
     autoPlay: true,
-    height: 360,
+    height: 800,
     width: '100%',
     parentId: "#player"
 });
+  </script>
+  <script>
+
   </script>
