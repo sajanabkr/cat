@@ -100,55 +100,6 @@ player.attachTo(playerElement);
 
       player.attachTo(playerElement);
 
-      //editor
-      window.onload = function() {
-
-        if (window.location.hash) {
-          var editorContent = atob(window.location.hash.substr(1))
-          document.getElementById("editor").innerHTML = editorContent
-          setTimeout(run, 0)
-        }
-
-        var editor = ace.edit("editor");
-        var session = editor.getSession();
-
-        editor.setTheme("ace/theme/katzenmilch");
-        session.setMode("ace/mode/javascript");
-        session.setTabSize(2);
-        session.setUseSoftTabs(true);
-
-        var parser = new Parser($('#output'));
-        var load = function(fn) {
-          if (window.clappr.externals.length > 0) {
-            var lastScript = window.clappr.externals.length
-            window.clappr.externals.forEach(function(url, index) {
-	      var script = document.createElement('script')
-
-	      script.setAttribute("type", "text/javascript")
-	      script.setAttribute("src", url)
-              if (index === (lastScript - 1)) {
-		script.onload = fn
-              }
-	      script.onerror = function(e){alert('we cant load ' + url + ': e' + e)}
-
-	      document.body.appendChild(script)
-            })
-	  } else {
-	    fn()
-          }
-        }
-
-        $('.run').click(function() {
-          run()
-        });
-
-        function run() {
-          var code = ace.edit('editor').getSession().getValue();
-          var b64EncodedCode = btoa(code)
-          window.location.hash = b64EncodedCode
-          load(function(){parser.parse(code)})
-        }
-      }
-    </script>
+   
   </body>
 </html>
