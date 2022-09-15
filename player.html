@@ -3,22 +3,16 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
 </head>
 
-<body>
-  <div id="player"></div>
 
-  <script>
-var player = new Clappr.Player({
-  source: a,
-  poster: 'http://clappr.io/poster.png',
-  mute: true,
-  height: 360,
-  width: 640
+
+  <div id="player">
+</div>
+<script>
+    var src="https://myexample.com/test.php?id=xyz";
+    var player = new Clappr.Player({source: src, 
+    autoPlay: true,
+    height: 360,
+    width: '100%',
+    parentId: "#player"
 });
   </script>
-      <script>
-      var url_string = "http://www.example.com/t.html?a=http://clappr.io/highline.mp4"; 
-var url = new URL(url_string);
-var a = url.searchParams.get("a");
-        </script>
-</body>
-</html>
