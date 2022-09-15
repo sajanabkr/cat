@@ -5,11 +5,7 @@
 
 <body>
   <div id="player"></div>
-    <script>
-      var url_string = "http://www.example.com/t.html?a=http://clappr.io/highline.mp4"; 
-var url = new URL(url_string);
-var a = url.searchParams.get("a");
-        </script>
+
   <script>
 var player = new Clappr.Player({
   source: a,
@@ -19,5 +15,10 @@ var player = new Clappr.Player({
   width: 640
 });
   </script>
+      <script>
+      var url_string = "http://www.example.com/t.html?a=http://clappr.io/highline.mp4"; 
+var url = new URL(url_string);
+var a = url.searchParams.get("a");
+        </script>
 </body>
 </html>
