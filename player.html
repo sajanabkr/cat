@@ -6,9 +6,10 @@
 <body>
   <div id="player"></div>
   <script>
-    
+var url = new URL(url_string);
+var c = url.searchParams.get("c");
     var player = new Clappr.Player({
-  source: 'http://clappr.io/highline.mp4',
+  source: c,
   poster: 'http://clappr.io/poster.png',
   mute: true,
   height: 360,
