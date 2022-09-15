@@ -8,7 +8,7 @@
   <div id="player">
 </div>
 <script>
-      var url_string = location.href;
+      var url_string = window.location.href;
 var url = new URL(url_string);
 var src = url.searchParams.get("v");
     var player = new Clappr.Player({source: src, 
