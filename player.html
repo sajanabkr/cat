@@ -4,20 +4,14 @@
 </head>
 
 
-
   <div id="player">
 </div>
 <script>
-      var url_string = window.location.href;
-var url = new URL(url_string);
-var src = url.searchParams.get("v");
+    var src="https://myexample.com/test.php?id=xyz";
     var player = new Clappr.Player({source: src, 
     autoPlay: true,
-    height: 800,
+    height: 360,
     width: '100%',
     parentId: "#player"
 });
-  </script>
-  <script>
-
   </script>
