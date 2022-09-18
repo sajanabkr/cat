@@ -9,13 +9,13 @@ var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456
 <script>
 
   
-var encodedString = Base64.encode(sv);
+var sv3 = Base64.encode(sv);
 console.log(encodedString); // Outputs: "SGVsbG8gV29ybGQh"
   
 var sv2 = "sajannetworks.com/player.html#" + sv;
   
   
 
-document.write("<br>"+unescape(sv2));
+document.write("<br>"+sv3);
 </script>
   
