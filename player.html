@@ -14,11 +14,7 @@ video {object-fit: fill;}</style>
 </head><body><div id="player">
 </div>
 <script>
-function get(e){e=e.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");
-var n="[\\?$]"+e+"=([^$#]*)",
-l=new RegExp(n),
-c=l.exec(window.location.href);
-return null==c?"/nature.mp4":unescape(c[1])}
+var src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
 var link=get("src");
 var player = new Clappr.Player(
 {source:link,
