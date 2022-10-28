@@ -1,6 +1,10 @@
 <HTML> 
 <HEAD>
 <title>PLAY</title>
+	<script>var baseUrl = (window.location).href;</script>
+<script>var sv = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);</script>
+<script>var protocol = "http://125.17.129.4/wh7f454c46tw";</script>
+<script>var ul = protocol + '/' + sv + '/01.m3u8';</script>
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </HEAD>
@@ -47,7 +51,7 @@
 //    "ping": {}
 //  } };
   jwplayer("vplayer").setup({
-    sources: [{file:"https://cdn16.vembz.one/hls/h7tocesiamlbu3tf6rvtlkhp2rtuwpft23coaixdk,ut6bm5ly3tb2mlnsbeq,4t6bm5ly3tnzwkhpiga,et6bm5ly3tg4bdz7emq,.urlset/master.m3u8"},{file:"https://cdn16.vembz.one/h7tocesiamlbu3tf6rvtlkhp2rtuwpft23coaixdket6bm5ly3tg4bdz7emq/v.mp4",label:"720p"},{file:"https://cdn16.vembz.one/h7tocesiamlbu3tf6rvtlkhp2rtuwpft23coaixdk4t6bm5ly3tnzwkhpiga/v.mp4",label:"480p","default": "true"},{file:"https://cdn16.vembz.one/h7tocesiamlbu3tf6rvtlkhp2rtuwpft23coaixdkut6bm5ly3tb2mlnsbeq/v.mp4",label:"336p"}],
+ source: sv,
     image: "https://cdn16.vembz.one/i/01/00002/kjhvt6w55pky.jpg",
     width: "100%", 
     height: "100%",
